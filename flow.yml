@@ -1,0 +1,9 @@
+# flow.yaml
+
+appId: host.exp.Exponent
+---
+- launchApp
+- tapOn: "guinea-pig-expo"
+- tapOn: "Explore, tab, 2 of 2"
+- tapOn:
+    point: "50%,44%"
