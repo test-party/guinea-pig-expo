@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, TouchableOpacity } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -50,6 +50,17 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <TouchableOpacity
+        style={{
+          width: 16,
+          height: 16,
+        }}
+        onPress={() => {
+          console.log('Test button pressed');
+        }}
+      >
+        <ThemedText>Test</ThemedText>
+      </TouchableOpacity>
     </ParallaxScrollView>
   );
 }
