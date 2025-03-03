@@ -51,7 +51,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
-      <View style={{ width: 16, height: 16, backgroundColor: 'red' }}>
+      <View style={{ height: 16, backgroundColor: 'red' }}>
         <Button title="Test" onPress={() => console.log('Test')} color="white" accessibilityLabel='touch-target' />
       </View>
     </ParallaxScrollView>
