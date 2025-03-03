@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Platform, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Platform, TouchableOpacity, Button } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { View } from 'react-native'
 
 export default function HomeScreen() {
   return (
@@ -50,17 +51,9 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
-      <TouchableOpacity
-        style={{
-          width: 16,
-          height: 16,
-        }}
-        onPress={() => {
-          console.log('Test button pressed');
-        }}
-      >
-        <ThemedText>Test</ThemedText>
-      </TouchableOpacity>
+      <View style={{ width: 16, height: 16, backgroundColor: 'red' }}>
+        <Button title="Test" onPress={() => console.log('Test')} color="white" />
+      </View>
     </ParallaxScrollView>
   );
 }
