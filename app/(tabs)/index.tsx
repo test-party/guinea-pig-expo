@@ -5,11 +5,8 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { View } from 'react-native'
-import CheckBox from 'react-native-check-box';
-import { useState } from 'react';
 
 export default function HomeScreen() {
-  const [isChecked, setIsChecked] = useState(false)
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -59,14 +56,6 @@ export default function HomeScreen() {
       </View>
       <Button title="Same Label as 'Test'" onPress={() => console.log('Test')} accessibilityLabel='touch-target' />
       <Button title="No Label" onPress={() => console.log('Test')} />
-      <View>
-        <CheckBox
-          onClick={() => {
-            setIsChecked(!isChecked)
-          }}
-          isChecked={isChecked}
-          leftText='CHECKED' />
-      </View>
     </ParallaxScrollView>
   );
 }
