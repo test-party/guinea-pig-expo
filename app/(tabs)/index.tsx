@@ -4,9 +4,12 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { View } from 'react-native'
+import { View } from 'react-native';
+import CheckBox from 'react-native-check-box';
+import { useState } from 'react';
 
 export default function HomeScreen() {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -53,6 +56,11 @@ export default function HomeScreen() {
       </ThemedView>
       <View style={{ height: 16, backgroundColor: 'red' }}>
         <Button title="Test" onPress={() => console.log('Test')} color="white" accessibilityLabel='touch-target' />
+      </View>
+      <View>
+        <CheckBox isChecked={isChecked} onClick={() => {
+          setIsChecked(!isChecked)
+        }}/>
       </View>
     </ParallaxScrollView>
   );
