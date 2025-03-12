@@ -38,6 +38,22 @@ export default function TabTwoScreen() {
         style={{ alignSelf: "center", width: 100, height: 100 }}
       />
 
+      {/* This image fails the rule (has the word "image" in the accessibilityLabel) */}
+      <Image
+        source={require("@/assets/images/favicon.png")}
+        style={{ alignSelf: "center", width: 100, height: 100 }}
+        accessibilityLabel="Image of ... Alt-Text-Description"
+        accessible={true}
+      />
+
+      {/* This image fails the rule (has the word "icon" in the accessibilityLabel) */}
+      <Image
+        source={require("@/assets/images/favicon.png")}
+        style={{ alignSelf: "center", width: 100, height: 100 }}
+        accessibilityLabel="Icon of ... Alt-Text-Description"
+        accessible={true}
+      />
+
       <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
