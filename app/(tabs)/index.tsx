@@ -54,8 +54,6 @@ export default function HomeScreen() {
       <View style={{ height: 16, backgroundColor: 'red' }}>
         <Button title="Test" onPress={() => console.log('Test')} color="white" accessibilityLabel='touch-target' />
       </View>
-      <Button title="Same Label as 'Test'" onPress={() => console.log('Test')} accessibilityLabel='touch-target' />
-      <Button title="No Label" onPress={() => console.log('Test')} />
     </ParallaxScrollView>
   );
 }
