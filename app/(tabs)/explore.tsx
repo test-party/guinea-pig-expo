@@ -23,6 +23,21 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
+
+      {/* This image passes the rule (has accessibilityLabel) */}
+      <Image
+        source={require("@/assets/images/favicon.png")}
+        style={{ alignSelf: "center", width: 100, height: 100 }}
+        accessibilityLabel="Image-Alt-Text-Description Passing"
+        accessible={true}
+      />
+
+      {/* This image fails the rule (missing accessibilityLabel) */}
+      <Image
+        source={require("@/assets/images/react-logo.png")}
+        style={{ alignSelf: "center", width: 100, height: 100 }}
+      />
+
       <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
