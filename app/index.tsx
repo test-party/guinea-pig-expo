@@ -10,6 +10,7 @@ export default function HomeScreen() {
             <Link style={styles.link} href="/(tabs)">Classic Tabs Page</Link>
             <Link style={styles.link} href={"/button"}>Button Test</Link>
             <Link style={styles.link} href={"/image"}>Image Test</Link>
+            <Link style={styles.link} href={"/textInput"}>Text Input Test</Link>
         </ThemedView>
     )
 }
