@@ -33,6 +33,7 @@ export default function RootLayout() {
         <Stack.Screen name='index' options={{ headerTitle: "Pregame Mobile Test Pages"}}/>
         <Stack.Screen name="(tabs)" options={{ headerTitle: "Tabs", headerBackTitle: "Home" }} />
         <Stack.Screen name='button' options={{ headerTitle: "Button", headerBackTitle: "Home" }} />
+        <Stack.Screen name='image' options={{ headerTitle: "Image", headerBackTitle: "Home" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

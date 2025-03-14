@@ -9,6 +9,7 @@ export default function HomeScreen() {
             <ThemedText style={styles.title}>Select a Rule to Test</ThemedText>
             <Link style={styles.link} href="/(tabs)">Classic Tabs Page</Link>
             <Link style={styles.link} href={"/button"}>Button Test</Link>
+            <Link style={styles.link} href={"/image"}>Image Test</Link>
         </ThemedView>
     )
 }
