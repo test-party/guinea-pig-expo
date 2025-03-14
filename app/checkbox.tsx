@@ -6,6 +6,7 @@ import Checkbox from 'expo-checkbox';
 
 export default function CheckboxScreen() {
     const [isChecked, setIsChecked] = useState(false);
+    const [isUnchecked, setIsUnchecked] = useState(true);
     return (
         <ThemedView>
             <ThemedView style={styles.container}>
@@ -14,8 +15,13 @@ export default function CheckboxScreen() {
             <ThemedText style={styles.margin}>Default Passing Case</ThemedText>
             <ThemedView style={styles.container}>
                 <Checkbox accessibilityLabel="A valid checkbox" value={isChecked} onValueChange={setIsChecked} />
+                <Checkbox accessibilityLabel="A valid unchecked checkbox" value={isUnchecked} onValueChange={setIsUnchecked} />
             </ThemedView>
-            <ThemedText style={styles.margin} accessibilityLabel="I fail due to duplicate label">Case 1: The accessibility label must be unique.  This text has the same accessibility label as the checkbox below so it fails the check</ThemedText>
+            <ThemedText style={styles.margin} accessibilityLabel="I fail due to no label">Case 1: The checkbox must have an accessibility label.  This checkbox doesn't so it fails.</ThemedText>
+            <ThemedView style={styles.container}>
+                <Checkbox value={isChecked} onValueChange={setIsChecked} />
+            </ThemedView>
+            <ThemedText style={styles.margin} accessibilityLabel="I fail due to duplicate label">Case 2: The accessibility label must be unique.  This text has the same accessibility label as the checkbox below so it fails the check</ThemedText>
             <ThemedView style={styles.container}>
                 <Checkbox accessibilityLabel="I fail due to duplicate label" value={isChecked} onValueChange={setIsChecked} />
             </ThemedView>
