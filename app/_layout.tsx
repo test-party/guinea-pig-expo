@@ -34,6 +34,7 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerTitle: "Tabs", headerBackTitle: "Home" }} />
         <Stack.Screen name='button' options={{ headerTitle: "Button", headerBackTitle: "Home" }} />
         <Stack.Screen name='image' options={{ headerTitle: "Image", headerBackTitle: "Home" }} />
+        <Stack.Screen name='date-picker' options={{ headerTitle: "DatePicker", headerBackTitle: "Home" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
