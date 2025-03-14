@@ -35,6 +35,7 @@ export default function RootLayout() {
         <Stack.Screen name='button' options={{ headerTitle: "Button", headerBackTitle: "Home" }} />
         <Stack.Screen name='image' options={{ headerTitle: "Image", headerBackTitle: "Home" }} />
         <Stack.Screen name='checkbox' options={{ headerTitle: "Checkbox", headerBackTitle: "Home" }} />
+        <Stack.Screen name='textInput' options={{ headerTitle: "Text Input", headerBackTitle: "Home" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
