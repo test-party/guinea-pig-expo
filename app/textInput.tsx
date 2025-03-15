@@ -16,8 +16,15 @@ export default function TextInputScreen() {
             </ThemedText>
 
             {/* Pass Case: Visual Label + accessibilityLabel */}
+            <Text
+                style={styles.caseHeader}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no"
+            >
+                Pass Case: Visual Label + accessibilityLabel
+            </Text>
             <View>
-                <Text>Number Field</Text>
+                <Text style={styles.label}>Number Field</Text>
                 <TextInput
                     style={styles.input}
                     value={field1Value}
@@ -30,8 +37,15 @@ export default function TextInputScreen() {
             </View>
 
             {/* Fail Case: Visual Label Only (no accessibilityLabel) */}
+            <Text
+                style={styles.caseHeader}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no"
+            >
+                Fail Case: Visual Label Only (no accessibilityLabel)
+            </Text>
             <View>
-                <Text>Number Field</Text>
+                <Text style={styles.label}>Number Field</Text>
                 <TextInput
                     style={styles.input}
                     value={field2Value}
@@ -43,6 +57,13 @@ export default function TextInputScreen() {
             </View>
 
             {/* Fail Case: accessibilityLabel Only (no visual label) */}
+            <Text
+                style={styles.caseHeader}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no"
+            >
+                Fail Case: accessibilityLabel Only (no visual label)
+            </Text>
             <View>
                 <TextInput
                     style={styles.input}
@@ -56,6 +77,14 @@ export default function TextInputScreen() {
             </View>
 
             {/* Fail Case: Placeholder Only (no visual label or accessibilityLabel) */}
+            <Text
+                style={styles.caseHeader}
+                accessibilityElementsHidden={true}
+                importantForAccessibility="no"
+            >
+                Fail Case: Placeholder Only (no visual label or
+                accessibilityLabel)
+            </Text>
             <View>
                 <TextInput
                     style={styles.input}
@@ -82,13 +111,15 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     caseHeader: {
-        marginTop: 16,
-        marginBottom: 8,
+        marginTop: 30,
+        marginBottom: 6,
         fontSize: 16,
         fontWeight: "500",
     },
-    labelContainer: {
-        marginBottom: 20,
+    label: {
+        fontSize: 14,
+        marginBottom: 4,
+        color: "#333",
     },
     input: {
         height: 50,
@@ -97,6 +128,6 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         paddingHorizontal: 12,
         fontSize: 16,
-        backgroundColor: "#F9F9F9",
+        backgroundColor: "#FFF",
     },
 });
