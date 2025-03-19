@@ -15,15 +15,6 @@ export default function DatePickerScreen() {
             <ThemedView style={styles.container}>
                 <DateTimePicker value={dateValue} accessibilityLabel='I Pass' />
             </ThemedView>
-            <ThemedText style={styles.margin} accessibilityLabel="I fail due to duplicate label">Case 1: The accessibility label must be unique.  This text has the same accessibility label as the Date Picker below.</ThemedText>
-            <ThemedView style={styles.container}>
-                <DateTimePicker value={dateValue} accessibilityLabel='I fail due to duplicate label' />
-            </ThemedView>
-            <ThemedText style={styles.margin}>Case 2: Date Picker cannot have style "graphical" or "wheel" </ThemedText>
-            <ThemedView style={styles.container}>
-                <DateTimePicker value={dateValue} accessibilityLabel='I fail due to style graphical' />
-                <DateTimePicker aria-label='Hello?' value={dateValue} accessibilityLabel='I fail due to style wheel' />
-            </ThemedView>
         </ThemedView>
     )
 }
