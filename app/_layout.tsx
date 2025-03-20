@@ -31,13 +31,14 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name='index' options={{ headerTitle: "Pregame Mobile Test Pages"}}/>
-        <Stack.Screen name="(tabs)" options={{ headerTitle: "Tabs", headerBackTitle: "Home" }} />
-        <Stack.Screen name='button' options={{ headerTitle: "Button", headerBackTitle: "Home" }} />
-        <Stack.Screen name='image' options={{ headerTitle: "Image", headerBackTitle: "Home" }} />
-        <Stack.Screen name='checkbox' options={{ headerTitle: "Checkbox", headerBackTitle: "Home" }} />
-        <Stack.Screen name='textInput' options={{ headerTitle: "Text Input", headerBackTitle: "Home" }} />
-        <Stack.Screen name='date-picker' options={{ headerTitle: "DatePicker", headerBackTitle: "Home" }} />
+        <Stack.Screen name="(tabs)" options={{ headerTitle: "Tabs", headerBackTitle: "Back" }} />
+        <Stack.Screen name='button' options={{ headerTitle: "Button", headerBackTitle: "Back" }} />
+        <Stack.Screen name='image' options={{ headerTitle: "Image", headerBackTitle: "Back" }} />
+        <Stack.Screen name='checkbox' options={{ headerTitle: "Checkbox", headerBackTitle: "Back" }} />
+        <Stack.Screen name='textInput' options={{ headerTitle: "Text Input", headerBackTitle: "Back" }} />
+        <Stack.Screen name='date-picker' options={{ headerTitle: "DatePicker", headerBackTitle: "Back" }} />
         <Stack.Screen name='link-text' options={{ headerTitle: "Link Text", headerBackTitle: "Home" }} />
+        <Stack.Screen name='progress-indicator' options={{ headerTitle: "Progress Indicator", headerBackTitle: "Back" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
