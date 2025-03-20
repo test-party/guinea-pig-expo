@@ -13,14 +13,6 @@ export default function ProgressIndicatorScreen() {
             <ThemedView style={styles.container}>
                 <ActivityIndicator accessibilityLabel='A passing loading indicator'/>
             </ThemedView>
-            <ThemedText style={styles.margin} accessibilityLabel="I fail due to no label">Case 1: The Progress Indicator must have an accessibility label.  The one below doesn't so it fails.</ThemedText>
-            <ThemedView style={styles.container}>
-                <ActivityIndicator />
-            </ThemedView>
-            <ThemedText style={styles.margin} accessibilityLabel="I fail due to duplicate label">Case 2: The accessibility label must be unique.  This text has the same accessibility label as the progress indicator below so it fails the check</ThemedText>
-            <ThemedView style={styles.container}>
-                <ActivityIndicator accessibilityLabel='I fail due to duplicate label'/>
-            </ThemedView>
         </ThemedView>
     )
 }
