@@ -13,11 +13,8 @@ export default function HomeScreen() {
             <Link style={styles.link} href="/checkbox">Checkbox Test</Link>
             <Link style={styles.link} href={"/textInput"}>Text Input Test</Link>
             <Link style={styles.link} href={"/date-picker"}>Date Picker Test</Link>
-<<<<<<< HEAD
             <Link style={styles.link} href={"/link-text"}>Link Text Test</Link>
-=======
             <Link style={styles.link} href={"/progress-indicator"}>Progress Indicator Test</Link>
->>>>>>> 54e60ef (amk - progress rule)
         </ThemedView>
     )
 }

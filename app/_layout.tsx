@@ -37,7 +37,7 @@ export default function RootLayout() {
         <Stack.Screen name='checkbox' options={{ headerTitle: "Checkbox", headerBackTitle: "Back" }} />
         <Stack.Screen name='textInput' options={{ headerTitle: "Text Input", headerBackTitle: "Back" }} />
         <Stack.Screen name='date-picker' options={{ headerTitle: "DatePicker", headerBackTitle: "Back" }} />
-        <Stack.Screen name='link-text' options={{ headerTitle: "Link Text", headerBackTitle: "Home" }} />
+        <Stack.Screen name='link-text' options={{ headerTitle: "Link Text", headerBackTitle: "Back" }} />
         <Stack.Screen name='progress-indicator' options={{ headerTitle: "Progress Indicator", headerBackTitle: "Back" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
