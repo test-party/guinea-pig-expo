@@ -16,6 +16,7 @@ export default function HomeScreen() {
             <Link style={styles.link} href={"/link-text"}>Link Text Test</Link>
             <Link style={styles.link} href={"/progress-indicator"}>Progress Indicator Test</Link>
             <Link style={styles.link} href={"/tabs"}>Tabs Test</Link>
+            <Link style={styles.link} href={"/stepper"}>Stepper Test</Link>
         </ThemedView>
     )
 }
