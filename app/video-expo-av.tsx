@@ -1,19 +1,15 @@
-import { useVideoPlayer, VideoView } from "expo-video";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { Video } from "expo-av";
+import { useRef } from "react";
 
 const videoSource: string =
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 
 export default function VideoScreen(): JSX.Element {
-    const player1 = useVideoPlayer(videoSource, (player) => {
-        player.loop = true;
-    });
-
-    const player2 = useVideoPlayer(videoSource, (player) => {
-        player.loop = true;
-    });
+    const videoRef1 = useRef(null);
+    const videoRef2 = useRef(null);
 
     return (
         <ThemedView style={styles.screen}>
@@ -30,9 +26,11 @@ export default function VideoScreen(): JSX.Element {
                         Pass Case: default props
                     </ThemedText>
                     <View style={styles.videoContainer}>
-                        <VideoView 
+                        <Video
+                            source={{ uri: videoSource }}
+                            ref={videoRef1}
+                            useNativeControls
                             style={styles.video}
-                            player={player1} 
                         />
                     </View>
                 </View>
@@ -43,10 +41,12 @@ export default function VideoScreen(): JSX.Element {
                         Pass Case: custom accessibilityLabel
                     </ThemedText>
                     <View style={styles.videoContainer}>
-                        <VideoView
+                        <Video
+                            source={{ uri: videoSource }}
+                            ref={videoRef2}
+                            useNativeControls
                             style={styles.video}
-                            player={player2}
-                            accessibilityLabel="Funny bunny22"
+                            accessibilityLabel="Funny bunny"
                             accessible={true}
                         />
                     </View>
