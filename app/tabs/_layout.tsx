@@ -27,14 +27,14 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name="tab1"
+        name="index"
         options={{
           title: 'Tab 1',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="tab2"
         options={{
           title: 'Tab 2',
           tabBarAccessibilityLabel: "Hello?",
