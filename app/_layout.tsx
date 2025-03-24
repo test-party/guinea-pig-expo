@@ -31,7 +31,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name='index' options={{ headerTitle: "Pregame Mobile Test Pages"}}/>
-        <Stack.Screen name="(tabs)" options={{ headerTitle: "Tabs", headerBackTitle: "Back" }} />
+        <Stack.Screen name="(tabs)" options={{ headerTitle: "Classic Tabs", headerBackTitle: "Back" }} />
         <Stack.Screen name='button' options={{ headerTitle: "Button", headerBackTitle: "Back" }} />
         <Stack.Screen name='image' options={{ headerTitle: "Image", headerBackTitle: "Back" }} />
         <Stack.Screen name='checkbox' options={{ headerTitle: "Checkbox", headerBackTitle: "Back" }} />
@@ -39,6 +39,7 @@ export default function RootLayout() {
         <Stack.Screen name='date-picker' options={{ headerTitle: "DatePicker", headerBackTitle: "Back" }} />
         <Stack.Screen name='link-text' options={{ headerTitle: "Link Text", headerBackTitle: "Back" }} />
         <Stack.Screen name='progress-indicator' options={{ headerTitle: "Progress Indicator", headerBackTitle: "Back" }} />
+        <Stack.Screen name='tabs' options={{ headerTitle: "Tabs", headerBackTitle: "Back" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

@@ -15,6 +15,7 @@ export default function HomeScreen() {
             <Link style={styles.link} href={"/date-picker"}>Date Picker Test</Link>
             <Link style={styles.link} href={"/link-text"}>Link Text Test</Link>
             <Link style={styles.link} href={"/progress-indicator"}>Progress Indicator Test</Link>
+            <Link style={styles.link} href={"/tabs"}>Tabs Test</Link>
         </ThemedView>
     )
 }
