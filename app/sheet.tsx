@@ -6,7 +6,8 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { BottomSheetModal, BottomSheetModalProvider, BottomSheetView } from '@gorhom/bottom-sheet';
 
 export default function SheetScreen() {
-    const [modalVisible, setModalVisible] = useState(false);
+    const [failModalVisible, setFailModalVisible] = useState(false);
+    const [passModalVisible, setPassModalVisible] = useState(false);
 
     // ref
     const bottomSheetFailModalRef = useRef<BottomSheetModal>(null);
@@ -28,21 +29,21 @@ export default function SheetScreen() {
                     <ThemedView style={styles.container}>
                         <ThemedText style={styles.title}>Testing "sheet" rule</ThemedText>
                     </ThemedView>
-                    <ThemedText style={styles.margin}>Default Passing React Native Modal</ThemedText>
+                    <ThemedText style={styles.margin}>Fail case: React Native Modal</ThemedText>
                     <Modal
                         animationType="slide"
                         transparent={true}
-                        visible={modalVisible}
+                        visible={failModalVisible}
                         onRequestClose={() => {
                             Alert.alert('Modal has been closed.');
-                            setModalVisible(!modalVisible);
+                            setFailModalVisible(!failModalVisible);
                         }}>
                         <View style={styles.centeredView}>
                             <View style={styles.modalView}>
                                 <Text style={styles.modalText}>Hello World!</Text>
                                 <Pressable
                                     style={[styles.button, styles.buttonClose]}
-                                    onPress={() => setModalVisible(!modalVisible)}>
+                                    onPress={() => setFailModalVisible(!failModalVisible)}>
                                     <Text style={styles.textStyle}>Hide Modal</Text>
                                 </Pressable>
                             </View>
@@ -50,22 +51,50 @@ export default function SheetScreen() {
                     </Modal>
                     <Pressable
                         style={[styles.button, styles.buttonOpen]}
-                        onPress={() => setModalVisible(true)}>
-                        <Text style={styles.textStyle}>Show Modal</Text>
+                        onPress={() => setFailModalVisible(true)}>
+                        <Text style={styles.textStyle}>Show Fail Modal</Text>
                     </Pressable>
-                    <ThemedText style={styles.margin}>Fail Case: React Native Bottom Sheet, No Scroll View</ThemedText>
 
+                    <ThemedText style={styles.margin}>Pass case: React Native Bottom Sheet</ThemedText>
+                    <Modal
+                        animationType="slide"
+                        transparent={true}
+                        visible={passModalVisible}
+                        onRequestClose={() => {
+                            Alert.alert('Modal has been closed.');
+                            setPassModalVisible(!passModalVisible);
+                        }}>
+                        <View style={styles.centeredView}>
+                            <View style={styles.modalView}>
+                                <ScrollView style={{ maxHeight: 100 }}>
+                                    <Text style={styles.modalText}>Hello World!</Text>
+                                    <Pressable
+                                        style={[styles.button, styles.buttonClose]}
+                                        onPress={() => setPassModalVisible(!passModalVisible)}>
+                                        <Text style={styles.textStyle}>Hide Modal</Text>
+                                    </Pressable>
+                                </ScrollView>
+                            </View>
+                        </View>
+                    </Modal>
+                    <Pressable
+                        style={[styles.button, styles.buttonOpen]}
+                        onPress={() => setPassModalVisible(true)}>
+                        <Text style={styles.textStyle}>Show Pass Modal</Text>
+                    </Pressable>
+
+                    <ThemedText style={styles.margin}>Fail Case: React Native Bottom Sheet, No Scroll View</ThemedText>
                     <Pressable
                         onPress={handlePresentFailModalPress}
                         style={[styles.button, styles.buttonOpen]}>
-                        <Text style={styles.textStyle}>Show Bottom Sheet</Text>
+                        <Text style={styles.textStyle}>Show Fail Bottom Sheet</Text>
                     </Pressable>
 
                     <ThemedText style={styles.margin}>Pass Case: React Native Bottom Sheet, With Scroll View</ThemedText>
                     <Pressable
                         onPress={handlePresentPassModalPress}
                         style={[styles.button, styles.buttonOpen]}>
-                        <Text style={styles.textStyle}>Show Bottom Sheet</Text>
+                        <Text style={styles.textStyle}>Show Pass Bottom Sheet</Text>
                     </Pressable>
                 </ThemedView>
 
@@ -113,7 +142,8 @@ const styles = StyleSheet.create({
     margin: {
         marginTop: 20,
         marginLeft: 10,
-        marginRight: 10
+        marginRight: 10,
+        marginBottom: 10
     },
     centeredView: {
         flex: 1,
