@@ -41,6 +41,8 @@ export default function RootLayout() {
         <Stack.Screen name='progress-indicator' options={{ headerTitle: "Progress Indicator", headerBackTitle: "Back" }} />
         <Stack.Screen name='tabs' options={{ headerTitle: "Tabs", headerBackTitle: "Back" }} />
         <Stack.Screen name='stepper' options={{ headerTitle: "Stepper", headerBackTitle: "Back" }} />
+        <Stack.Screen name='video-expo-av' options={{ headerTitle: "Video (expo-av)", headerBackTitle: "Back" }} />
+        <Stack.Screen name='video-expo-video' options={{ headerTitle: "Video (expo-video)", headerBackTitle: "Back" }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
