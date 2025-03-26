@@ -50,6 +50,7 @@ export default function RootLayout() {
           <Stack.Screen name='video-expo-video' options={{ headerTitle: "Video (expo-video)", headerBackTitle: "Back" }} />
           <Stack.Screen name='video-expo-av-hint' options={{ headerTitle: "Video Hint (expo-av)", headerBackTitle: "Back" }} />
           <Stack.Screen name='video-expo-video-hint' options={{ headerTitle: "Video Hint (expo-video)", headerBackTitle: "Back" }} />
+          <Stack.Screen name='popover' options={{ headerTitle: "Popover", headerBackTitle: "Back" }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

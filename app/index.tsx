@@ -25,6 +25,7 @@ export default function HomeScreen() {
             <Link style={styles.link} href={"/video-expo-video"}>{`Video Test (expo-video)`}</Link>
             <Link style={styles.link} href={"/video-expo-av-hint"}>{`Video Hint Test (expo-av)`}</Link>
             <Link style={styles.link} href={"/video-expo-video-hint"}>{`Video Hint Test (expo-video)`}</Link>
+            <Link style={styles.link} href={"/popover"}>Popover Test</Link>
         </ThemedView>
     )
 }
