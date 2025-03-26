@@ -45,7 +45,7 @@ export default function VideoScreen(): JSX.Element {
                         <VideoView
                             style={styles.video}
                             player={player2}
-                            accessibilityLabel="Funny bunny22"
+                            accessibilityLabel="Funny bunny11"
                             accessible={true}
                             accessibilityHint="Custom hint - double tap to play or pause."
                         />

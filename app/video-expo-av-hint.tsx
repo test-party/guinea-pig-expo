@@ -44,7 +44,7 @@ export default function VideoScreen(): JSX.Element {
                             ref={videoRef2}
                             useNativeControls
                             style={styles.video}
-                            accessibilityLabel="Funny bunny"
+                            accessibilityLabel="Funny bunny1"
                             accessible={true}
                             accessibilityHint="Custom hint - double tap to play or pause."
                         />
@@ -54,7 +54,7 @@ export default function VideoScreen(): JSX.Element {
                 {/* Fail Case: custom accessibilityLabel (no accessibilityHint) */}
                 <View>
                     <ThemedText>
-                        Pass Case: custom accessibilityLabel
+                        {`Fail Case: custom accessibilityLabel (no accessibilityHint)`}
                     </ThemedText>
                     <View style={styles.videoContainer}>
                         <Video
@@ -62,7 +62,7 @@ export default function VideoScreen(): JSX.Element {
                             ref={videoRef2}
                             useNativeControls
                             style={styles.video}
-                            accessibilityLabel="Funny bunny"
+                            accessibilityLabel="Funny bunny2"
                             accessible={true}
                         />
                     </View>
