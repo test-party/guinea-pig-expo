@@ -41,6 +41,7 @@ export default function RootLayout() {
           <Stack.Screen name='link-text' options={{ headerTitle: "Link Text", headerBackTitle: "Back" }} />
           <Stack.Screen name='progress-indicator' options={{ headerTitle: "Progress Indicator", headerBackTitle: "Back" }} />
           <Stack.Screen name='tabs' options={{ headerTitle: "Tabs", headerBackTitle: "Back" }} />
+          <Stack.Screen name='text' options={{ headerTitle: "Text", headerBackTitle: "Back" }} />
           <Stack.Screen name='sheet' options={{ headerTitle: "Sheet", headerBackTitle: "Back" }} />
           <Stack.Screen name='stepper' options={{ headerTitle: "Stepper", headerBackTitle: "Back" }} />
           <Stack.Screen name='video-expo-av' options={{ headerTitle: "Video (expo-av)", headerBackTitle: "Back" }} />
