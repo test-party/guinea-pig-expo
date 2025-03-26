@@ -7,8 +7,8 @@ export default function SwitchAccessibilityTestScreen() {
     const [wifiEnabled, setWifiEnabled] = useState(false);
     const [notificationsEnabled, setNotificationsEnabled] = useState(true);
     const [darkMode, setDarkMode] = useState(false);
-    const [genericToggle1, setGenericToggle1] = useState(true); // reused label
-    const [genericToggle2, setGenericToggle2] = useState(false); // reused label
+    const [genericToggle1, setGenericToggle1] = useState(true);
+    const [genericToggle2, setGenericToggle2] = useState(false);
 
     return (
         <ThemedView style={styles.container}>
