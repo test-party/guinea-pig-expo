@@ -18,7 +18,11 @@ export default function SwitchAccessibilityTestScreen() {
 
             {/* ✅ Pass: Visible label + accessibilityLabel */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
                     ✅ Pass: Visible label + accessibilityLabel
                 </Text>
                 <View style={styles.row}>
@@ -33,7 +37,11 @@ export default function SwitchAccessibilityTestScreen() {
 
             {/* ✅ Pass: Visible label only */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
                     ✅ Pass: Visible label only
                 </Text>
                 <View style={styles.row}>
@@ -47,7 +55,11 @@ export default function SwitchAccessibilityTestScreen() {
 
             {/* ✅ Pass: accessibilityLabel only (unique) */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
                     ✅ Pass: accessibilityLabel only (unique)
                 </Text>
                 <View style={styles.row}>
@@ -62,7 +74,11 @@ export default function SwitchAccessibilityTestScreen() {
 
             {/* ❌ Fail: accessibilityLabel only (not unique) */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
                     ❌ Fail: accessibilityLabel only (not unique)
                 </Text>
                 <View style={styles.row}>
