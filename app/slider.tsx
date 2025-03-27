@@ -19,10 +19,18 @@ export default function SliderScreen() {
 
             {/* ✅ Pass: Visual label + accessibilityLabel */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>✅ Visual label + accessibilityLabel</Text>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
+                    ✅ Visual label + accessibilityLabel
+                </Text>
                 <View style={styles.row}>
                     <Text style={styles.label}>Volume</Text>
-                    <Text style={styles.valueText}>{Math.round(slider1Value * 100)}%</Text>
+                    <Text style={styles.valueText}>
+                        {Math.round(slider1Value * 100)}%
+                    </Text>
                 </View>
                 <Slider
                     style={styles.slider}
@@ -39,10 +47,18 @@ export default function SliderScreen() {
 
             {/* ❌ Fail: Visual label only */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>❌ Visual label only</Text>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
+                    ❌ Visual label only
+                </Text>
                 <View style={styles.row}>
                     <Text style={styles.label}>Brightness</Text>
-                    <Text style={styles.valueText}>{Math.round(slider2Value * 100)}%</Text>
+                    <Text style={styles.valueText}>
+                        {Math.round(slider2Value * 100)}%
+                    </Text>
                 </View>
                 <Slider
                     style={styles.slider}
@@ -58,7 +74,13 @@ export default function SliderScreen() {
 
             {/* ❌ Fail: accessibilityLabel only */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>❌ accessibilityLabel only</Text>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
+                    ❌ accessibilityLabel only
+                </Text>
                 <Slider
                     style={styles.slider}
                     value={slider3Value}
@@ -74,10 +96,18 @@ export default function SliderScreen() {
 
             {/* ❌ Fail: Duplicate accessibilityLabel */}
             <View style={styles.card}>
-                <Text style={styles.caseHeader}>❌ Duplicate accessibilityLabel</Text>
+                <Text
+                    style={styles.caseHeader}
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no"
+                >
+                    ❌ Duplicate accessibilityLabel
+                </Text>
                 <View style={styles.row}>
                     <Text style={styles.label}>Setting A</Text>
-                    <Text style={styles.valueText}>{Math.round(slider4Value * 100)}%</Text>
+                    <Text style={styles.valueText}>
+                        {Math.round(slider4Value * 100)}%
+                    </Text>
                 </View>
                 <Slider
                     style={styles.slider}
@@ -92,7 +122,9 @@ export default function SliderScreen() {
                 />
                 <View style={styles.row}>
                     <Text style={styles.label}>Setting B</Text>
-                    <Text style={styles.valueText}>{Math.round(slider5Value * 100)}%</Text>
+                    <Text style={styles.valueText}>
+                        {Math.round(slider5Value * 100)}%
+                    </Text>
                 </View>
                 <Slider
                     style={styles.slider}
