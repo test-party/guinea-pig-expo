@@ -18,6 +18,7 @@ export default function HomeScreen() {
             <Link style={styles.link} href={"/tabs"}>Tabs Test</Link>
             <Link style={styles.link} href={"/text"}>Text Test</Link>
             <Link style={styles.link} href={"/sheet"}>Sheet Test</Link>
+            <Link style={styles.link} href={"/slider"}>Slider Test</Link>
             <Link style={styles.link} href={"/stepper"}>Stepper Test</Link>
             <Link style={styles.link} href={"/switch"}>Switch Test</Link>
             <Link style={styles.link} href={"/video-expo-av"}>{`Video Test (expo-av)`}</Link>
