@@ -10,7 +10,7 @@ export default function TabTwoScreen() {
         <ThemedText style={styles.title}>Testing "tabs" rule</ThemedText>
       </ThemedView>
       <ThemedView style={styles.container}>
-        <ThemedText style={styles.margin}>This expo tab passes</ThemedText>
+        <ThemedText style={styles.margin}>Tab 2 passes</ThemedText>
       </ThemedView>
     </ThemedView>
   );
