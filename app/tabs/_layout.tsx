@@ -37,7 +37,6 @@ export default function TabLayout() {
         name="tab2"
         options={{
           title: 'Tab 2',
-          tabBarAccessibilityLabel: "Hello?",
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
