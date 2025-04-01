@@ -14,18 +14,22 @@ export default function CheckboxScreen() {
             <ThemedView style={styles.container}>
                 <Popover
                     from={(
-                        <Button title='Passing!'></Button>
+                        <Button accessibilityLabel='Passing!' title='Passing!'></Button>
                     )}>
-                    <ThemedText>This is the contents of the popover</ThemedText>
+                    <ThemedView>
+                        <ThemedText>This is the contents of the popover</ThemedText>
+                    </ThemedView>
                 </Popover>
             </ThemedView>
             <ThemedText style={styles.margin} accessibilityLabel="I fail due to no text">Case 1: The popover must have text.  This popover doesn't so it fails.</ThemedText>
             <ThemedView style={styles.container}>
                 <Popover
                     from={(
-                        <Button title='Failing!'></Button>
+                        <Button accessibilityLabel='Failing!' title='Failing!'></Button>
                     )}>
-                    <ThemedText></ThemedText>
+                    <ThemedView>
+                        <ThemedText></ThemedText>
+                    </ThemedView>
                 </Popover>
             </ThemedView>
         </ThemedView>
