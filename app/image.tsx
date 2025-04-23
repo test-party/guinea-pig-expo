@@ -1,10 +1,10 @@
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, ScrollView } from "react-native";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
 export default function ImageScreen() {
     return (
-        <ThemedView>
+        <ScrollView>
             <ThemedView style={styles.container}>
                 <ThemedText style={styles.title}>
                     Testing "image-alt" rule
@@ -56,7 +56,7 @@ export default function ImageScreen() {
                 accessibilityLabel="Image Below Fold"
                 accessible={true}
             />
-        </ThemedView>
+        </ScrollView>
     );
 }
 
