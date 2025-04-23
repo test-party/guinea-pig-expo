@@ -40,6 +40,22 @@ export default function ImageScreen() {
                 accessibilityLabel="Icon of ... Alt-Text-Description"
                 accessible={true}
             />
+
+            <ThemedText style={styles.margin}>Fail Case: has the word "logo" in the accessibilityLabel</ThemedText>
+            <Image
+                source={require("@/assets/images/favicon.png")}
+                style={{ alignSelf: "center", width: 100, height: 100 }}
+                accessibilityLabel="Logo of ... Alt-Text-Description"
+                accessible={true}
+            />
+
+            <ThemedText style={styles.margin}>Extra Case: Below Fold</ThemedText>
+            <Image
+                source={require("@/assets/images/favicon.png")}
+                style={{ alignSelf: "center", width: 100, height: 100 }}
+                accessibilityLabel="Image Below Fold"
+                accessible={true}
+            />
         </ThemedView>
     );
 }
