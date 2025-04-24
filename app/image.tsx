@@ -1,10 +1,10 @@
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, ScrollView } from "react-native";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
 export default function ImageScreen() {
     return (
-        <ThemedView>
+        <ScrollView>
             <ThemedView style={styles.container}>
                 <ThemedText style={styles.title}>
                     Testing "image-alt" rule
@@ -40,7 +40,23 @@ export default function ImageScreen() {
                 accessibilityLabel="Icon of ... Alt-Text-Description"
                 accessible={true}
             />
-        </ThemedView>
+
+            <ThemedText style={styles.margin}>Fail Case: has the word "logo" in the accessibilityLabel</ThemedText>
+            <Image
+                source={require("@/assets/images/favicon.png")}
+                style={{ alignSelf: "center", width: 100, height: 100 }}
+                accessibilityLabel="Logo of ... Alt-Text-Description"
+                accessible={true}
+            />
+
+            <ThemedText style={styles.margin}>Extra Case: Below Fold</ThemedText>
+            <Image
+                source={require("@/assets/images/favicon.png")}
+                style={{ alignSelf: "center", width: 100, height: 100 }}
+                accessibilityLabel="Image Below Fold"
+                accessible={true}
+            />
+        </ScrollView>
     );
 }
 
