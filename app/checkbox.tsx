@@ -21,8 +21,8 @@ export default function CheckboxScreen() {
             <ThemedView style={styles.container}>
                 <Checkbox value={isChecked} onValueChange={setIsChecked} />
             </ThemedView>
-            <ThemedText style={styles.margin} accessibilityLabel="I fail due to duplicate label">Case 2: The accessibility label must be unique.  This text has the same accessibility label as the checkbox below so it fails the check</ThemedText>
-            <ThemedView style={styles.container}>
+            <ThemedText style={styles.margin}>Case 2: The accessibility label must be unique.  This text has the same accessibility label as the checkbox below so it fails the check</ThemedText>
+            <ThemedView style={styles.container} accessibilityLabel="I fail due to duplicate label">
                 <Checkbox accessibilityLabel="I fail due to duplicate label" value={isChecked} onValueChange={setIsChecked} />
             </ThemedView>
         </ThemedView>
